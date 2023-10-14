@@ -1,0 +1,15 @@
+<%- include('partials/header')%>
+  <!--  -->
+  <%- include('partials/nav')%>
+    <form class="m-auto w-25 mt-5 bg-light p-5 rounded" action="/update-task/<%= book._id %>" method="post">
+      <h1 class="mb-4">Update Book Page</h1>
+
+      <input class="form-control mb-3" type="text" placeholder="image URl" name="img" value="<%= book.img %>" />
+      <input class="form-control mb-3" type="text" placeholder="title" name="title" value="<%= book.title %>" />
+      <textarea name="description" placeholder="enter text here..." class="form-control"><%= book.description %>
+            </textarea>
+      <button class="mt-3 btn btn-primary w-25">Update</button>
+      <p>Want to go to homepage ? <a href="/home">Home</a></p>
+    </form>
+
+    <%- include('partials/footer')%>

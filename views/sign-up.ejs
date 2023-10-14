@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+   <form class="form m-auto bg-light p-5 rounded w-25 mt-5 " action="/sign-up" method="post">
+    <h1>Sign up page</h1>
+    <input class="form-control mb-3" type="text" name="username" placeholder="username" required>
+    <input class="form-control mb-3" type="email" name="email" placeholder="john@gmail.com" required>
+    <input class="form-control mb-3" type="password" name="password" placeholder="******" required>
+    <button class="btn btn-primary">Sign up</button>
+    <p>Already have an account? <a href="/sign-in">Sign in</a></p>
+   </form>
+<%- include('partials/footer') %>

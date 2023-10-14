@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+   
+
+  <div class=" w-50 d-flex align-items-center container mt-3 ">
+    <img height="120" width="150" class="rounded-circle me-5" style="object-fit: cover;" src="/images/<%= user.avatar %>" alt="">
+
+    <form action="/avatar" method="post" enctype="multipart/form-data">
+        <input class="form-control mb-3" type="file" name="avatar" >
+        <button class="btn btn-danger">Upload</button>
+    </form>
+
+    <a class="btn btn-warning mt-5 pt-1 position-absolute end-50 " href="/update/<%=user._id %>">Edit profile</a>
+    <div class="content  w-50  mt-5 me-5">
+      <a class="btn btn-primary  " href="/reset/<%=user._id%>">Reset Password</a>
+    </div>
+
+  </div>
+
+ 
+
+
+
+ <%- include('partials/footer') %>

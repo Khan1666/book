@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+   <form class="form m-auto mt-5 w-25 bg-light rounded p-5 " action="/get-email" method="post">
+    <h1>Forget password page</h1>
+    <input class="form-control mb-3" type="email" name="email" placeholder="john@email.com" required>
+    <button class="btn btn-primary mb-2">Send mail</button>
+    <p><a href="/sign-in">Sign in</a> | <a href="/sign-up">Sign up</a></p>
+   </form>
+<%- include('partials/footer') %>

@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+ 
+  <div class="content m-5 p-5 bg-warning text-secondary-emphasis rounded">
+    <h1>Home</h1>
+    <p>welcome to <strong><%=user.username%></strong></p>
+    <h3>Create Book <a class="btn btn-primary" href="/create-task">+</a></h3>
+    <ul class="list-group w-50">
+       <% books.forEach(function(book){ %>
+        <li class="list-group-item border-0 bg-transparent  mb-3 d-flex justify-content-between">
+          <div >
+            <div><img style="width: 50px; height: 50px;" src="<%= book.img %>" alt=""></div>
+            <strong class="h4"><%= book.title%></strong>
+
+            <br />
+
+            <span class="h6 text-muted">
+              <%= book.createdAt.toLocaleDateString() %>
+              </span>
+
+            <br />
+
+            <span class="h5"> <%= book.description %> </span>
+
+            <span>
+              <a class="text-decoration-none" href="/delete-task/<%=book._id %>">❌</a>
+                <a class="text-decoration-none"  href="/update-task/<%=book._id %>">✏️</a>  
+            </span>
+        </div>
+           </li>
+        
+
+   <% }) %>
+    </ul>
+  </div>
+ 
+
+  <%- include('partials/footer') %>
+

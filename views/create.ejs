@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+ 
+<form class="form m-auto mt-5 w-25 bg-light rounded p-5 " action="/create/<%= id %>" method="post" >
+    <h1 class="mb-3 ">Create password Form</h1>
+    <input class="form-control mb-3 " type="password" name="password" id="password" placeholder="new password" required>
+    <button class="btn btn-primary mb-2">Create</button>
+</form>
+ 
+
+  <%- include('partials/footer') %>
+
